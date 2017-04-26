@@ -2,7 +2,7 @@
   <artifact type="war" name="jerseydemo:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="archive" name="jerseydemo.war">
-      <element id="module-output" name="jerseydemo" />
+      <element id="artifact" artifact-name="jerseydemo:war exploded" />
     </root>
   </artifact>
 </component>
