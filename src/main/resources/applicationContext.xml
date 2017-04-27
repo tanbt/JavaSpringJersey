@@ -5,8 +5,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />-->
+    <bean id="greetingService" class="org.glassfish.jersey.archetypes.tanbui.GreetingServiceImpl"/>
 
-    <bean class="org.glassfish.jersey.archetypes.tanbui.DateTimeService"/>
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+
+    <bean class="org.glassfish.jersey.archetypes.tanbui.DateTimeService" scope="request"/>
+
+    <bean class="org.glassfish.jersey.archetypes.tanbui.SpringSingletonResource"/>
+
+    <bean class="org.glassfish.jersey.archetypes.tanbui.CustomExceptionMapper"/>
 
 </beans>
