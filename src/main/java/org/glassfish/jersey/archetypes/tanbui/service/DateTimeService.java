@@ -37,7 +37,7 @@
  * only if the new code is made subject to such option by the copyright
  * holder.
  */
-package org.glassfish.jersey.archetypes.tanbui;
+package org.glassfish.jersey.archetypes.tanbui.service;
 
 import java.util.Date;
 

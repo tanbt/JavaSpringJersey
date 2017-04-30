@@ -37,22 +37,20 @@
  * only if the new code is made subject to such option by the copyright
  * holder.
  */
-package org.glassfish.jersey.archetypes.tanbui;
-
-import javax.ws.rs.core.Response;
-import javax.ws.rs.ext.ExceptionMapper;
-import javax.ws.rs.ext.Provider;
+package org.glassfish.jersey.archetypes.tanbui.repository;
 
 /**
- * Exception mapper to convert {@link IllegalArgumentException} into a textual response.
+ * Simple greeting service.
  *
- * @author Marko Asplund (marko.asplund at yahoo.com)
+ * @author Marko Asplund (marko.asplund at oracle.com)
  */
-@Provider
-public class CustomExceptionMapper implements ExceptionMapper<IllegalArgumentException> {
+public interface GreetingService {
 
-    @Override
-    public Response toResponse(IllegalArgumentException exception) {
-        return Response.ok("Illegal Argument Exception Caught").build();
-    }
+    /**
+     * Workout a greeting.
+     *
+     * @param who to greet.
+     * @return greeting.
+     */
+    String greet(String who);
 }

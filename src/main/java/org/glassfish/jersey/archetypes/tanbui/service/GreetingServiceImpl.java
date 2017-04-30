@@ -1,7 +1,7 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright (c) 2013 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2013-2016 Oracle and/or its affiliates. All rights reserved.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common Development
@@ -37,20 +37,27 @@
  * only if the new code is made subject to such option by the copyright
  * holder.
  */
-package org.glassfish.jersey.archetypes.tanbui;
+package org.glassfish.jersey.archetypes.tanbui.service;
+
+import org.glassfish.jersey.archetypes.tanbui.repository.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
- * Simple greeting service.
+ * Simple {@link GreetingService} implementation to just say hello.
  *
- * @author Marko Asplund (marko.asplund at oracle.com)
+ * @author Marko Asplund (marko.asplund at yahoo.com)
+ * @author Marek Potociar (marek.potociar at oracle.com)
  */
-public interface GreetingService {
+public class GreetingServiceImpl implements GreetingService {
 
-    /**
-     * Workout a greeting.
-     *
-     * @param who to greet.
-     * @return greeting.
-     */
-    String greet(String who);
+    @Autowired
+    private HttpServletRequest servletRequest;
+
+    public String greet(String who) {
+        final String serverName = servletRequest.getServerName();
+        return String.format("hello, %s! Greetings from server %s!", who, serverName);
+    }
+
 }
