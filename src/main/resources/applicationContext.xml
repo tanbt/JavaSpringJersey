@@ -13,4 +13,6 @@
 
     <bean class="org.glassfish.jersey.archetypes.tanbui.SpringSingletonResource"/>
 
+    <bean id="userService" class="org.glassfish.jersey.archetypes.tanbui.service.UserServiceImpl"/>
+
 </beans>

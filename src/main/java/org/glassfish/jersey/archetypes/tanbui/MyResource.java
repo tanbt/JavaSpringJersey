@@ -9,6 +9,7 @@ public class MyResource extends ResourceConfig {
         register(RequestContextFilter.class);
         register(JerseyResource.class);
         register(SpringSingletonResource.class);
+        register(UserResource.class);
     }
 
 }
