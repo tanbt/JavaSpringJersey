@@ -7,6 +7,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUser(long userId) {
         User user = new User();
+        user.setUserId(userId);
         user.setFirstName("Tan");
         user.setLastName("Bui");
         user.setEmail("trungtanbui@gmail.com");
