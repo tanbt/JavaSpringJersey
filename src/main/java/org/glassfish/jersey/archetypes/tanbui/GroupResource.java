@@ -36,8 +36,15 @@ public class GroupResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{groupId}")
-    public Group getGroup(@PathParam("groupId") long groupId) {
-        return null;
+    public Group getGroup(@PathParam("groupId") String groupId) {
+        return groupService.getGroup(groupId);
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/{name: \\pL+[\\pL\\pZ\\pP]{0,}$}")
+    public List<Group> getGroups(@PathParam("name") String name) {
+        return groupService.getGroupsByName(name);
     }
 
     @PUT

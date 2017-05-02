@@ -14,4 +14,12 @@ public class GroupService {
     public List<Group> getGroups(int page, int size) {
         return groupRepository.findAll(new PageRequest(page, size)).getContent();
     }
+
+    public Group getGroup(String groupId) {
+        return groupRepository.findOne(groupId);
+    }
+
+    public List<Group> getGroupsByName(String name) {
+        return groupRepository.findAllByName(name);
+    }
 }
