@@ -2,7 +2,6 @@ package org.glassfish.jersey.archetypes.tanbui;
 
 
 import org.glassfish.jersey.archetypes.tanbui.entity.Group;
-import org.glassfish.jersey.archetypes.tanbui.entity.User;
 import org.glassfish.jersey.archetypes.tanbui.service.GroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
