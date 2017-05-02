@@ -1,5 +1,6 @@
 package org.glassfish.jersey.archetypes.tanbui;
 
+import org.glassfish.jersey.archetypes.tanbui.service.GroupService;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.spring.scope.RequestContextFilter;
 
@@ -10,6 +11,7 @@ public class MyResource extends ResourceConfig {
         register(JerseyResource.class);
         register(SpringSingletonResource.class);
         register(UserResource.class);
+        register(GroupResource.class);
     }
 
 }
