@@ -39,7 +39,6 @@
  */
 package org.glassfish.jersey.archetypes.tanbui.service;
 
-import org.glassfish.jersey.archetypes.tanbui.repository.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletRequest;

@@ -39,7 +39,7 @@
  */
 package org.glassfish.jersey.archetypes.tanbui;
 
-import org.glassfish.jersey.archetypes.tanbui.repository.GreetingService;
+import org.glassfish.jersey.archetypes.tanbui.service.GreetingService;
 import org.glassfish.jersey.archetypes.tanbui.service.DateTimeService;
 import org.springframework.beans.factory.annotation.Autowired;
 

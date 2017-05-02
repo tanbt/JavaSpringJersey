@@ -1,9 +1,9 @@
-package org.glassfish.jersey.archetypes.tanbui.service;
+package org.glassfish.jersey.archetypes.tanbui.repository;
 
 import org.glassfish.jersey.archetypes.tanbui.entity.User;
-import org.glassfish.jersey.archetypes.tanbui.repository.UserService;
+import org.glassfish.jersey.archetypes.tanbui.repository.UserRepository;
 
-public class UserServiceImpl implements UserService {
+public class UserRepositoryImpl implements UserRepository {
     @Override
     public User getUser(long userId) {
         User user = new User();
